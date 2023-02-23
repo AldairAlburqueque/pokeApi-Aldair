@@ -35,7 +35,7 @@ const PokeCard = ({pokemon}) => {
       
       <hr className='card_hr'/>
       
-        <ul className='card_stat'>
+        <ul className='card_stat-ul'>
         {
           poke?.stats.map(stat =>(
             <li className='card_stat-list' key={stat.stat.url}>

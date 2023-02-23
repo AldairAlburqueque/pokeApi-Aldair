@@ -4,6 +4,10 @@
     border-radius: 1.3em;
     border: 0.5em solid;
     overflow: hidden;
+    transition: transform 0.7s;
+}
+.card:hover{
+    transform: scale(1.01);
 }
 .card_header{
     height: 200px;
@@ -28,11 +32,14 @@
     justify-content: center;
     gap: 1em;
 }
+.card_type-iten{
+    text-transform: capitalize;
+}
 .card_hr{
     width: 80%;
     margin: 20px;
 }
-.card_stat{
+.card_stat-ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 0 0.5em 1.5em;
@@ -104,6 +111,9 @@ background-image: linear-gradient(176.37deg, #f9606f -32.26%, #e35825 22.55%, #e
 .bg-poison{
     background: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%);
 }
+.bg-rock{
+    background: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%);
+}
 .border-grass{
     border-color: #abdac6;
 }
@@ -143,6 +153,9 @@ background-image: linear-gradient(176.37deg, #f9606f -32.26%, #e35825 22.55%, #e
 .border-poison{
     border-color: #5B3184;
 }
+.border-rock{
+    border-color: #7E7E7E;
+}
 .color-grass{
     color: #2b7254;
 }
@@ -181,4 +194,7 @@ background-image: linear-gradient(176.37deg, #f9606f -32.26%, #e35825 22.55%, #e
 }
 .color-poison{
     color: #5B3184;
+}
+.color-rock{
+    color: #7E7E7E;
 }

@@ -57,7 +57,6 @@ box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
 .poke_type{
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     gap: 0.5em;
@@ -84,7 +83,32 @@ box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
     gap: 1em;
 }
 .card_stat{
-    
+    display: flex;
+    flex-direction: column;
+}
+.stat_title{
+    padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.stat{
+    margin: 0.5em;
+}
+.stat-list{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+}
+.stat_span_name{
+    margin: 0.5em 0;
+    text-transform: capitalize;
+}
+.table{
+    width: 100%;
+    border: 1px solid ;
+
+}
+.table_div{
+    width: auto;
 }
 .poke_movements{
     width: 85%;
@@ -100,7 +124,6 @@ box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
 }
 .movements_title{
     font-family: 'Roboto', sans-serif;
-    color: red;
     padding: 15px 0;
 }
 .movements_list{

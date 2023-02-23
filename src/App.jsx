@@ -7,8 +7,6 @@ import PokeInfo from './pages/PokeInfo'
 
 function App() {
   
-  
-  // console.log({nameTrainer});
   return (
     <div className="App">
       <Routes>
@@ -18,7 +16,6 @@ function App() {
           <Route path='/pokedex/:id' element={<PokeInfo />}/>
         </Route>
       </Routes>
-      {/* <h1>Pokedex</h1> */}
     </div>
   )
 }
