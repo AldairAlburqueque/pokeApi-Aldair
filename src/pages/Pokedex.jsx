@@ -15,7 +15,7 @@ const Pokedex = () => {
   const [selectValue, setSeletValue] = useState('allpokemons')
 
   useEffect(() => {
-    if(selectValue === 'allpokemon'){
+    if(selectValue === 'allpokemons'){
     const url = 'https://pokeapi.co/api/v2/pokemon?limit=150&offset=0'
     axios.get(url)
     .then(res => setPokemons(res.data))

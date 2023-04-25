@@ -78,7 +78,7 @@ const PokeInfo = () => {
               <div className='stat'>
                 <li className='stat-list' key={stat.stat.url}>
                 <span className='stat_span_name'>{stat.stat.name}</span>
-                <span className='stat_span_stat'>{stat.base_stat}/150</span>
+                <span className='stat_span_stat'>{stat.base_stat} /150</span>
               </li>
               <div className="table">
                 <div className={`table_div  bg-${poke?.types[0].type.name}`} style={{width:`${stat.base_stat}%`}}>
