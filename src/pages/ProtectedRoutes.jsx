@@ -4,7 +4,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 
 const ProtectedRoutes = () => {
 
-  const {nameTrainer} = useSelector(state=>state)
+const {nameTrainer} = useSelector(state=>state)
 
     if(nameTrainer){
         return <Outlet/>

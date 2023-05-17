@@ -26,8 +26,8 @@ const PokeInfo = () => {
   
   if(hasError){
     return <div className='has_error'>
-       <h1 className='error_title'>❌The Pokemon with name '{id}' not fount ❌</h1>
-       <img className='error_img' src={'https://albumizr.com/ia/1ed9b43268630800c68703b7473652a8.jpg'} alt="" />
+      <h1 className='error_title'>❌The Pokemon with name '{id}' not fount ❌</h1>
+      <img className='error_img' src={'https://albumizr.com/ia/1ed9b43268630800c68703b7473652a8.jpg'} alt="" />
     </div> 
     
     
@@ -44,7 +44,7 @@ const PokeInfo = () => {
           <div className='poke_measure'>
             <h3 className='measure'>Weight<span>{poke?.weight}</span></h3>
             <h3 className='measure'>Height<span>{poke?.height}</span></h3>
-           
+          
           </div>
           <div className='poke_header'>
             <div>
