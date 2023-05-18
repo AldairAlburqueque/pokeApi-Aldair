@@ -6,6 +6,7 @@ import PokeCard from '../components/pokedex/PokeCard'
 import SelectTypes from '../components/pokedex/SelectTypes'
 import Header from '../components/shared/Header'
 import './style/pokedex.css'
+import Pagination from './Pagination'
 
 const Pokedex = () => {
 
@@ -13,6 +14,16 @@ const Pokedex = () => {
 
   const [pokemons, setPokemons] = useState()
   const [selectValue, setSeletValue] = useState('allpokemons')
+
+  // new pag
+  const pokemonsTotal = pokemons?.results.length
+
+  const [productsPerPage, setProductsPerPage] = useState(12)
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const lastIndex = currentPage * productsPerPage
+  const firstIdex = lastIndex - productsPerPage
+  
 
   useEffect(() => {
     if(selectValue === 'allpokemons'){
@@ -51,7 +62,12 @@ const Pokedex = () => {
           <SelectTypes setSelectValue={setSeletValue}/>
         </div>
       </div>
-      
+      <Pagination 
+        productsPerPage ={productsPerPage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        pokemonsTotal={pokemonsTotal}
+      />
       <div className='card_info'>
         {
           pokemons?.results.map(pokemon=>(
@@ -59,7 +75,7 @@ const Pokedex = () => {
               key={pokemon.url}
               pokemon = {pokemon}
             />
-          ))
+          )).slice(firstIdex, lastIndex)
         }
       </div>
     </div>
