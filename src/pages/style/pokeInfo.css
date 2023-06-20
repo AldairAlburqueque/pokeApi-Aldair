@@ -110,7 +110,6 @@ box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
 }
 .table_div{
     width: auto;
-    overflow: hidden;
 }
 
 .poke_movements{
@@ -129,14 +128,14 @@ box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
     font-family: 'Roboto', sans-serif;
     padding: 15px 0;
 }
-.movements_list{
+.move_list{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     
 }
-.movements_list > span{
-    background-color: #aaa;
+.movements_list{
+    background-color: #d6d4d4;
     padding: 5px;
     border-radius: 5px;
 }

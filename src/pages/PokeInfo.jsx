@@ -81,7 +81,7 @@ const PokeInfo = () => {
                 <span className='stat_span_stat'>{stat.base_stat} /150</span>
               </li>
               <div className="table">
-                <div className={`table_div  bg-${poke?.types[0].type.name}`} style={{width:`${stat.base_stat}%`}}>
+                <div className={`table_div  bg-${poke?.types[0].type.name}`} style={{width:`${stat.base_stat * 0.7}%`}}>
                 {stat.base_stat}
                 </div>
               </div>
@@ -94,37 +94,16 @@ const PokeInfo = () => {
         </div>
         <div className="poke_movements">
           <h2 className='movements_title'>Movements</h2>
-          <div className="movements_list">
-            <span>Razor-Wind</span>
-            <span>Swords-Dance</span>
-            <span>Cut</span>
-            <span>Bind</span>
-            <span>Vine-Whip</span>
-            <span>Headbutt</span>
-            <span>Tackle</span>
-            <span>Body-Slam</span>
-            <span>Take-Down</span>
-            <span>Double-Edge</span>
-            <span>Growl</span>
-            <span>Strength</span>
-            <span>Mega-Drain</span>
-            <span>Leech-Seed</span>
-            <span>Growth</span>
-            <span>Razor-Leaf</span>
-            <span>Solar-Beam</span>
-            <span>Poison-Powder</span>
-            <span>Sleep-Powder</span>
-            <span>Petal-Dance</span>
-            <span>String-Shot</span>
-            <span>Toxic</span>
-            <span>Rage</span>
-            <span>Mimic</span>
-            <span>Double-Team</span>
-            <span>Defense-Curl</span>
-            <span>Light-Screen</span>
-            <span>Reflect</span>
-            <span>Bide</span><span>Sludge</span><span>Skull-Bash</span><span>Amnesia</span><span>Flash</span><span>Rest</span><span>Substitute</span><span>Snore</span><span>Curse</span><span>Protect</span><span>Sludge-Bomb</span><span>Mud-Slap</span><span>Outrage</span><span>Giga-Drain</span><span>Endure</span><span>Charm</span><span>False-Swipe</span><span>Swagger</span><span>Fury-Cutter</span><span>Attract</span><span>Sleep-Talk</span><span>Return</span><span>Frustration</span><span>Safeguard</span><span>Sweet-Scent</span><span>Synthesis</span><span>Hidden-Power</span><span>Sunny-Day</span><span>Rock-Smash</span><span>Facade</span><span>Nature-Power</span><span>Helping-Hand</span><span>Ingrain</span><span>Knock-Off</span><span>Secret-Power</span><span>Weather-Ball</span><span>Grass-Whistle</span><span>Bullet-Seed</span><span>Magical-Leaf</span><span>Natural-Gift</span><span>Worry-Seed</span><span>Seed-Bomb</span><span>Energy-Ball</span><span>Leaf-Storm</span><span>Power-Whip</span><span>Captivate</span><span>Grass-Knot</span><span>Venoshock</span><span>Round</span><span>Echoed-Voice</span><span>Grass-Pledge</span><span>Work-Up</span><span>Grassy-Terrain</span><span>Confide</span><span>Grassy-Glide</span>
-          </div>
+          <ul className="move_list">
+            {
+              poke?.moves.map(move => (
+                <li className="movements_list" key={move.move.url}>
+                  {move.move.name}
+                </li>
+              ))
+            }
+          </ul>
+            
 
         </div>
       </div>
